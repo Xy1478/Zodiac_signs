@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head><link rel="icon" type="image/gif" href="74865493.webp" /></head>
+<style>
+html {
+  height: 100%;
+  background-image: url("74865493.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+.bg-text2{
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.70);
+  color: #eafdfe;
+  font-weight: bold;
+position:absolute;
+  top: 45%;
+  left: 50%;
+ transform: translate(-50%, -50%);
+  width: 60%;
+height:70%;
+  padding: 5px;
+  text-align: center;
+font-family:noir;
+color:#FFD369;
+border-radius:5px;
+}
+.el{
+justify-content: space-evenly;
+display: flex;
+align-items: center;
+margin-top:-40px;
+}
+.button{
+background-color:#015668;
+border-radius:5px;
+width:100px;
+padding:5px 5px 5px 5px;
+color:#eafdfe;
+}
+input{
+    margin-top:0px;
+margin-left:0px;
+}
+</style>
+
+    <script>
+function sign(){
+        var mo=form.month.value;
+        var day=parseFloat(form.day.value);
+        if(mo=="January"){
+            if(day<32 && day>19){document.getElementById("output").innerHTML="Aquarius";}
+            else if(day<20&&day>0){document.getElementById("output").innerHTML="Capricornus";}
+            else{alert("Invalid Input");}
+        }
+        else if(mo=="February"){
+            if(day<19 && day>0){document.getElementById("output").innerHTML="Aquarius";}
+            else if(day<30 &&day>18){document.getElementById("output").innerHTML="Pisces";}
+            else{alert("Invalid Input");}
+        }
+        else if(mo=="March"){
+            if(day<21 && day>0){document.getElementById("output").innerHTML="Pisces";}
+            else if(day<32 &&day>20){document.getElementById("output").innerHTML="Aries";}
+            else{alert("Invalid Input");}
+        }
+        else if(mo=="April"){
+            if(day<20 && day>0){document.getElementById("output").innerHTML="Aries";}
+            else if(day<31 &&day>19){document.getElementById("output").innerHTML="Taurus";}
+            else{alert("Invalid Input");}
+        }
+        else if(mo=="May"){
+            if(day<21 && day>0){document.getElementById("output").innerHTML="Taurus";}
+            else if(day<32 &&day>20){document.getElementById("output").innerHTML="Gemini";}
+            else{alert("Invalid Input");}
+        }
+        else if(mo=="June"){
+            if(day<22 && day>0){document.getElementById("output").innerHTML="Gemini";}
+            else if(day<30 &&day>21){document.getElementById("output").innerHTML="Cancer";}
+            else{alert("Invalid Input");}
+        }
+        else if(mo=="July"){
+            if(day<23 && day>0){document.getElementById("output").innerHTML="Cancer";}
+            else if(day<32 &&day>22){document.getElementById("output").innerHTML="Leo";}
+            else{alert("Invalid Input");}
+        }
+        else if(mo=="August"){
+            if(day<23 && day>0){document.getElementById("output").innerHTML="Leo";}
+            else if(day<32&&day>22){document.getElementById("output").innerHTML="Virgo";}
+            else{alert("Invalid Input");}
+        }
+        else if(mo=="September"){
+            if(day<23 && day>0){document.getElementById("output").innerHTML="Virgo";}
+            else if(day<31&&day>22){document.getElementById("output").innerHTML="Libra";}
+            else{alert("Invalid Input");}
+        }
+        else if(mo=="October"){
+            if(day<24 && day>0){document.getElementById("output").innerHTML="Libra";}
+            else if(day<32 &&day>23){document.getElementById("output").innerHTML="Scorpius";}
+            else{alert("Invalid Input");}
+        }
+        else if(mo=="November"){
+            if(day<22 && day>0){document.getElementById("output").innerHTML="Scorpius";}
+            else if(day<31 &&day>21){document.getElementById("output").innerHTML="Sagittarius";}
+            else{alert("Invalid Input");}
+        }
+        else if(mo=="December"){
+            if(day<22 && day>0){document.getElementById("output").innerHTML="Sagittarius";}
+            else if(day<32 &&day>21){document.getElementById("output").innerHTML="Capricorn";}
+            else{alert("Invalid Input");}
+        }
+        else {alert("Invalid Input");
+        
+     }   }
+     function del(){
+         document.getElementById("output").innerHTML=" ";
+     }
+    </script>
+<body>
+<div class="bg-text2">
+<b><h1 style="font-size:300%; font-style:oblique; margin-bottom: auto;">ZODIAC SIGNS</h1></b>
+<form name="form">
+<input type="text" name="Month" id="month" placeholder="Month (Sentence Case):" style="padding:5px">
+<input type="number" name="Month" id="day"style="padding:5px">
+<input type="button" class="button" id="start" value="Start" onclick="sign()" style="margin-top:2%;"/>
+<input type="reset" class="button" style="margin-top:0;" value="Clear" onclick="del()">
+<p style="font-size: 200%;">Output;</p>
+<p id="output" style="font-size: 450%;"></p>
+</form>
+</div>
+</body>
+</html>
